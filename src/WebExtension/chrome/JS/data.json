@@ -1,0 +1,34 @@
+{
+  "Popular Labels": {
+    "Lifestyle & Entertainment": 0.9,
+    "News & Politics": 0.8,
+    "Travel & Exploration": 0.7,
+    "Health & Wellness": 0.6,
+    "Technology & Science": 0.72,
+    "Food & Cuisine" : 0.4,
+    "Pet & Animal Content" : 0.3,
+    "Nature & Photography" : 0.2,
+    "Sports & Fitness" : 0.9232,
+    "Cultural & Social Issues" : 0.0
+  },
+
+  "Popular Moods": {
+    "Joyful": 0.9,
+    "Sad/Depressive": 0.8,
+    "Peaceful": 0.7,
+    "Energetic/Excited": 0.6,
+    "Mysterious/Romantic": 0.5,
+    "Nostalgic/Hopeful" : 0.4,
+    "Frightening/Creepy" : 0.3,
+    "Inspiring" : 0.2,
+    "Playful" : 0.1,
+    "Thoughtful/Contemplative" : 0.0
+  },
+
+  "Popular purpose": {
+    "Educate": 0.3,
+    "Inspire": 0.2,
+    "Entertain" : 0.1,
+    "Promotion" : 0.0
+  }
+}

@@ -1,0 +1,4 @@
+src/WebExtension/chrome/JS/node_modules/*
+src/WebExtension/chrome/salama_testing/*
+src/WebExtension/chrome/node_modules/*
+src/.venv

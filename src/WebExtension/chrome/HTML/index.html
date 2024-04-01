@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <style>
+      canvas {
+        border: 0.5px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-height: 270px;
+        width: 250px;
+        }
+    </style>
+  </head>
+  <body>
+    <!------------------------------LOGIN---------------------------------->
+    <div class="login" id="login-window">
+      <div class="nutri">NUTRI</div>
+
+      <button class="close-button" id="close-button-login">
+        <img class="x-img" src="../Images/Icons/x-button.png" />
+      </button>
+
+      <p class="please-sign-in">Please Sign In to continue</p>
+      <div class="inner">
+        <img class="image" src="../Images/Icons/login.png" />
+        <form class="text-field">
+          <label for="Email-input"></label>
+          <input class="login-input" id="Email-input" placeholder="Username" />
+          <input
+            type="password"
+            class="login-input"
+            id="Password-input"
+            placeholder="Password"
+          />
+        </form>
+        <button class="Stay-signed-in-button" id="Stay-signed-in-button">
+          Stay signed in
+        </button>
+        <button class="Create-account-button" id="Create-account-button">
+          Create an account
+        </button>
+      </div>
+      <div class="text-wrapper-3">Please choose a website</div>
+      <button class="instagram">
+        <img class="img" src="../Images/Social-icons/instagram.png" />
+      </button>
+      <button class="x">
+        <img class="image-2" src="../Images/Social-icons/twitter%20x.png" />
+      </button>
+      <button class="tik-tok">
+        <img
+          class="image-3"
+          src="../Images/Social-icons/1024px-TikTok_logo.svg.png"
+        />
+      </button>
+      <button class="signin-button" id="signin-button">
+        <p class="text-wrapper-4">Sign In</p>
+      </button>
+    </div>
+
+    <!------------------------------MAIN---------------------------------->
+
+    <div class="main" id="main-window">
+      <div class="nutri">NUTRI</div>
+
+      <button class="close-button" id="close-button-main">
+        <img class="x-img" src="../Images/Icons/x-button.png" />
+      </button>
+      <button class="front-arrow" id="front-arrow-main">
+        <img class="leftarrow" src="../Images/Icons/leftarrow.png" />
+      </button>
+
+      <button class="calender-button">
+        <p class="calender-button-text">Today</p>
+      </button>
+      <button
+        class="extract-data-button"
+        id="extract-data-button"
+        onclick="getData()"
+      >
+        Extract Data
+      </button>
+      <div id="output"></div>
+      <div class="time-spent-window">
+        <p class="time-spent-window-text" id="tsw-data"></p>
+      </div>
+      <div class="length-scrolled">
+        <p class="length-scrolled-text" id="length-data"></p>
+      </div>
+
+      <div class="feed-nutri-inner">
+        <div class="group">
+          <div class="Feed-Nutrition-window">
+            <p class="Feed-Nutrition-Facts">Feed Nutrition Facts</p>
+            <p class="Nutrition-header">Popular topics:</p>
+            <p class="Popular-topics-text" id="n1-text"></p>
+            <p class="Popular-topics-text" id="n2-text"></p>
+            <p class="Popular-topics-text" id="n3-text"></p>
+            <p class="Popular-topics-text" id="n4-text"></p>
+            <p class="Popular-topics-percentage" id="n1-per"></p>
+            <p class="Popular-topics-percentage" id="n2-per"></p>
+            <p class="Popular-topics-percentage" id="n3-per"></p>
+            <p class="Popular-topics-percentage" id="n4-per"></p>
+          </div>
+
+          <div class="Mood-window">
+            <p class="Nutrition-header">Moods:</p>
+            <p class="Mood-text" id="n1-m"></p>
+            <p class="Mood-text" id="n2-m"></p>
+            <p class="Mood-text" id="n3-m"></p>
+            <p class="Mood-percentage" id="n1-mper"></p>
+            <p class="Mood-percentage" id="n2-mper"></p>
+            <p class="Mood-percentage" id="n3-mper"></p>
+          </div>
+
+          <div class="Purpose-window">
+            <p class="Nutrition-header">Purposes:</p>
+            <p class="Purpose-text" id="n1-p"></p>
+            <p class="Purpose-text" id="n2-p"></p>
+            <p class="Purpose-text" id="n3-p"></p>
+            <p class="Purpose-percentage" id="n1-pper"></p>
+            <p class="Purpose-percentage" id="n2-pper"></p>
+            <p class="Purpose-percentage" id="n3-pper"></p>
+          </div>
+        </div>
+        <button class="View-Infographics-main" id="View-Infographics-button">
+          View Infographics
+        </button>
+      </div>
+
+      <div class="recommendations">
+        <div class="slide">
+          <div class="colorslider">
+            <img class="track" src="../Images/Icons/track.png" />
+            <img class="slider" src="../Images/Icons/slider.jpg" />
+          </div>
+        </div>
+        <p class="NUTRI-suggestion">
+          <span class="Nutri-text">NUTRI</span>
+          <span class="suggestion-text"> Reflection:</span>
+        </p>
+        <p class="p">
+          - Our algorithm advises you to add more Informative and Educational
+          posts. At the moment, your feed consists of 5% Useful content
+        </p>
+
+        <button class="settings-button-main">Manage Settings</button>
+      </div>
+    </div>
+
+    <!------------------------------CHARTS---------------------------------->
+
+    <div class="additional-window" id="additional-window" hidden="hidden">
+      <div class="NUTRI">NUTRI</div>
+      <button class="close-button" id="close-button-additional">
+        <img class="x-img" src="../Images/Icons/x-button.png" />
+      </button>
+      <button class="calender-newbutton">
+        23.11.23
+        <img alt="cal" class="cal-img" src="../Images/Icons/calendar.png" />
+        <!--calendar img-->
+      </button>
+
+      <button class="back-arrow" id="back-arrow-additional">
+        <img class="rightarrow" src="../Images/Icons/rightarrow.png" />
+      </button>
+
+      <div class="User-infographics">Your Infographics</div>
+
+      <div class="Ptopics-chart-text">Popular topics:</div>
+      <canvas class="chart-1" id="Ptopics-chart" width="400" height="500"></canvas>
+      <!--diagram1-->
+
+      <div class="Moods-chart-text">Moods:</div>
+      <canvas class="chart-2" id="Moods-chart" width="400" height="500"></canvas>
+      <!--diagram2-->
+
+      <div class="Purposes-chart-text">Purposes:</div>
+      <canvas class="chart-3" id="Purposes-chart" width="400" height="500"></canvas>
+      <!--diagram3-->
+    </div>
+
+    <script src="../JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
