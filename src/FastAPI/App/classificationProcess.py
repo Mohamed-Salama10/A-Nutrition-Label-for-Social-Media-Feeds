@@ -62,6 +62,30 @@ def is_image_valid(input_path_or_url):
 
 
 def process_single_unclassified_posts():
+     """
+    Process a single unclassified post retrieved from a specified classification URL.
+
+    The function fetches an unclassified post from a web service, validates its image URL,
+    and if valid, performs classification based on labels, mood, and purpose. 
+    It then computes the cosine similarity of the image and updates the classification results back to the database.
+
+    The process involves:
+    - Retrieving an unclassified post using a GET request.
+    - Checking if the post contains an image URL and verifying its validity.
+    - Classifying the image using predefined lists for labels, mood, and purpose.
+    - Computing cosine similarity for the image.
+    - Updating the classification results in the database using a PUT request.
+
+    Exceptions:
+    - Handles exceptions related to network requests and classification processes, logging any errors encountered during the operations.
+
+    Notes:
+    - The function assumes the presence of global variables such as `headers`, `classification_url`, `update_broken_url`, `labels_list`, `mood_list`, `purpose_list`, and `update_results_url` which are used in the requests.
+    - If the image URL is invalid, it sends an update using a PUT request to mark the URL as broken.
+
+    Outputs:
+    - The function prints the status of each major step to the console, including errors.
+    """
     try:
 
         unclassified_post = requests.get(classification_url, headers=headers)
