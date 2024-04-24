@@ -320,22 +320,6 @@ async def updatePostTime(
 ############################################################################
 
 
-def classification_function():
-    while True:
-        process_single_unclassified_posts()
-        time.sleep(0)  # Call the function every 5 seconds
-
-
-# Create a thread for running the background function
-background_thread = threading.Thread(target=classification_function)
-background_thread.daemon = (
-    True  # Daemonize the thread so it terminates with the main program
-)
-background_thread.start()
-
-############################################################################
-
-
 @nutritionRouter.get("/getPendingPostsCount")
 async def getPendingPostsCount(current_user: dict = Depends(get_current_user)):
     current_user_id = current_user["id"]
